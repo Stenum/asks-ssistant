@@ -1,0 +1,33 @@
+{
+  "name": "asks-ssistant",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "prebuild": "expo prebuild",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@elevenlabs/react-native": "^0.3.0",
+    "@livekit/react-native": "^1.4.0",
+    "@livekit/react-native-webrtc": "^1.0.4",
+    "expo": "~51.0.13",
+    "expo-av": "~14.0.5",
+    "expo-constants": "~16.0.2",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.3",
+    "react-native-gesture-handler": "~2.17.1",
+    "react-native-safe-area-context": "4.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "18.2.23",
+    "@types/react-native": "0.73.0",
+    "eslint": "^8.57.0",
+    "typescript": "5.3.3"
+  }
+}
