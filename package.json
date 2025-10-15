@@ -14,6 +14,8 @@
     "@elevenlabs/react-native": "0.3.2",
     "@livekit/react-native": "2.7.4",
     "@livekit/react-native-webrtc": "125.0.12",
+    "@livekit/react-native-expo-plugin": "^1.0.1",
+    "@config-plugins/react-native-webrtc": "^9.0.0",
     "expo": "~51.0.13",
     "expo-av": "~14.0.5",
     "expo-constants": "~16.0.2",
