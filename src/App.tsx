@@ -24,6 +24,13 @@ import { ElevenLabsProvider, useConversation } from '@elevenlabs/react-native';
 const ELEVENLABS_API_KEY = 'REPLACE_WITH_YOUR_API_KEY';
 const AGENT_ID = 'REPLACE_WITH_YOUR_AGENT_ID';
 
+// These mirror the defaults used by the ElevenLabs React Native SDK when it
+// exchanges the conversation token internally. Omitting the `source` and
+// `version` query params causes the backend to assume a browser client, which
+// breaks the WebRTC flow on iOS.
+const ELEVENLABS_SDK_SOURCE = 'react_native_sdk';
+const ELEVENLABS_SDK_VERSION = '0.3.2';
+
 interface LogEntry {
   id: string;
   message: string;
@@ -34,9 +41,12 @@ type PermissionState = 'unknown' | 'granted' | 'denied';
 const MAX_LOG_ITEMS = 50;
 
 async function fetchConversationToken(signal?: AbortSignal): Promise<string> {
-  const url = `https://api.elevenlabs.io/v1/convai/conversation/token?agent_id=${encodeURIComponent(
-    AGENT_ID
-  )}`;
+  const query = new URLSearchParams({
+    agent_id: AGENT_ID,
+    source: ELEVENLABS_SDK_SOURCE,
+    version: ELEVENLABS_SDK_VERSION
+  });
+  const url = `https://api.elevenlabs.io/v1/convai/conversation/token?${query.toString()}`;
   const response = await fetch(url, {
     method: 'GET',
     headers: {
