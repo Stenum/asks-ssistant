@@ -19,7 +19,7 @@ import type {
   ConversationStatus,
   ConversationTranscription
 } from '@elevenlabs/react-native';
-import { useConversation } from '@elevenlabs/react-native';
+import { ElevenLabsProvider, useConversation } from '@elevenlabs/react-native';
 
 const ELEVENLABS_API_KEY = 'REPLACE_WITH_YOUR_API_KEY';
 const AGENT_ID = 'REPLACE_WITH_YOUR_AGENT_ID';
@@ -529,7 +529,11 @@ const styles = StyleSheet.create({
 });
 
 const App: React.FC = () => {
-  return <VoiceAgentScreen />;
+  return (
+    <ElevenLabsProvider>
+      <VoiceAgentScreen />
+    </ElevenLabsProvider>
+  );
 };
 
 export default App;
