@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "asks-ssistant",
+    "slug": "asks-ssistant",
+    "scheme": "asks-ssistant",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0b1a2d"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.askssistant.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "The microphone is required so the ElevenLabs voice agent can hear you."
+      }
+    },
+    "android": {
+      "package": "com.askssistant.app",
+      "permissions": []
+    },
+    "plugins": [
+      "@livekit/react-native-expo-plugin",
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "Allow asks-ssistant to access your camera for call features.",
+          "microphonePermission": "Allow asks-ssistant to access your microphone to talk to the voice agent."
+        }
+      ]
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-0000-0000-000000000000"
+      }
+    }
+  }
+}
