@@ -11,9 +11,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@elevenlabs/react-native": "^0.3.0",
-    "@livekit/react-native": "^2.7.0",
-    "@livekit/react-native-webrtc": "^126.0.0",
+    "@elevenlabs/react-native": "0.3.2",
+    "@livekit/react-native": "2.7.4",
+    "@livekit/react-native-webrtc": "125.0.12",
     "expo": "~51.0.13",
     "expo-av": "~14.0.5",
     "expo-constants": "~16.0.2",

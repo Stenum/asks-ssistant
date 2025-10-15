@@ -19,7 +19,7 @@ npx expo prebuild
 ```
 
 > The project uses Expo config plugins for LiveKit/WebRTC, so you must build a custom development client. Expo Go is not supported.
-> We pin `@livekit/react-native` to the 2.7.x line alongside the matching `@livekit/react-native-webrtc` 126.x release to satisfy the ElevenLabs SDK peer requirements.
+> We pin `@elevenlabs/react-native` to 0.3.2 with the matching LiveKit pair: `@livekit/react-native` 2.7.4 and `@livekit/react-native-webrtc` 125.0.12. This satisfies the SDK peer requirements without needing legacy peer overrides.
 
 ## Configure credentials
 
